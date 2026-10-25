@@ -1,0 +1,93 @@
+body{
+  background-color: rgb(37, 116, 235);
+  color: white;
+}
+
+form input {
+  width: 400px;
+  padding: 14px;
+  font-size: 16px;
+}
+
+form button {
+  padding: 14px 22px;
+  font-size: 16px;
+}
+
+form {
+  margin-bottom: 24px;
+}
+
+.app { 
+  max-width: 1000px; 
+  margin: 0 auto;
+  padding: 1rem; 
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+.card img { 
+  width: 70%; 
+  border-radius: 8px;
+}
+.no-poster { 
+  aspect-ratio: 2 / 3; 
+  display:grid; 
+  place-items: center; 
+  background: #ddd;
+  border-radius: 8px; 
+}
+.error { 
+  color: crimson; 
+}
+
+@media (max-width: 600px) {
+  .grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .movie-modal{
+    padding: 20px;
+  }
+}
+
+@media (max-width:350px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.modal-back{
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.movie-modal {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 24px;
+  border-radius: 12px;
+  background: white;
+  color: black;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
